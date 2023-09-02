@@ -37,13 +37,19 @@ def save():
 
 
 #icons
-image_icon=PhotoImage(file="logot.jpg")
+image_icon=PhotoImage(file="C:\Github\Python\Stagnography_Python\skull.png")
 root.iconphoto(False,image_icon)
 
 
 #logo
-logo=PhotoImage(file="logo.png")
-Label(root,image=logo,bg="black").place(x=10,y=10)
+image = Image.open("C:\Github\Python\Stagnography_Python\cyber-security.png")
+ 
+# Resize the image using resize() method
+resize_image = image.resize((60, 60))
+ 
+img = ImageTk.PhotoImage(resize_image)
+
+Label(root,image=img,bg="black").place(x=10,y=10)
 
 Label(root,text="STEGAVO",bg="black",fg="white",font="arial 24 bold").place(x=100,y=20)
 
